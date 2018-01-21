@@ -4,10 +4,25 @@ import blessed from 'blessed';
 const { spawn } = require('child_process');
 import screen from './screen';
 import logBox from './boxes/logBox';
-import menuBox from './boxes/menuBox';
+
+const menuBox = blessed.box({
+  top: 0,
+  left: 0,
+  width: '50%',
+  height: '70%',
+  content: 'a: checkout branch \nb: start devServer\nc: start test',
+  tags: true,
+  border: 'none',
+  style: {
+    fg: 'white',
+    bg: '#0083C5'
+  }
+});
 
 screen.append(menuBox);
 screen.append(logBox);
+
+screen.render();
 
 screen.key(['c'], function(ch, key) {
   let logContent = '';
@@ -23,5 +38,3 @@ screen.key(['c'], function(ch, key) {
     console.log(`ps stderr: ${data}`);
   });
 });
-
-screen.render();
