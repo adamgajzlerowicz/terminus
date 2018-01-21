@@ -1,3 +1,5 @@
+console.log('starting log');
+
 setInterval(function() {
   console.log(new Date());
   console.log(
