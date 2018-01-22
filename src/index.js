@@ -4,20 +4,7 @@ import blessed from 'blessed';
 const { spawn } = require('child_process');
 import screen from './screen';
 import logBox from './boxes/logBox';
-
-const menuBox = blessed.box({
-  top: 0,
-  left: 0,
-  width: '50%',
-  height: '70%',
-  content: 'a: checkout branch \nb: start devServer\nc: start test',
-  tags: true,
-  border: 'none',
-  style: {
-    fg: 'white',
-    bg: '#0083C5'
-  }
-});
+import menuBox from './boxes/menuBox';
 
 screen.append(menuBox);
 screen.append(logBox);
