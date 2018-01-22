@@ -5,11 +5,10 @@ const { spawn } = require('child_process');
 import screen from './screen';
 import logBox from './boxes/logBox';
 import menuBox from './boxes/menuBox';
+import { state, updateState } from './state';
 
 screen.append(menuBox);
 screen.append(logBox);
-
-screen.render();
 
 screen.key(['c'], function(ch, key) {
   let logContent = '';
@@ -25,3 +24,5 @@ screen.key(['c'], function(ch, key) {
     console.log(`ps stderr: ${data}`);
   });
 });
+
+screen.render();

@@ -1,3 +1,5 @@
+// @flow
+
 import blessed from 'blessed';
 
 const menu: string[] = [
