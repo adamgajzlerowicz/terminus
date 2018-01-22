@@ -10,7 +10,8 @@
     "flow": "flow"
   },
   "dependencies": {
-    "blessed": "^0.1.81"
+    "blessed": "^0.1.81",
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
